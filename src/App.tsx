@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="bg-[var(--tg-theme-bg-color)] text-[var(--tg-theme-text-color)]">
       <button onClick={onClose}>
-
+        ПРР
       </button>
     </div>
   )
