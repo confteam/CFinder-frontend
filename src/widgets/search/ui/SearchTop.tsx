@@ -3,7 +3,7 @@ import { Tags } from "@/widgets/tags";
 
 export function SearchTop() {
   return (
-    <div className="border-b-2 border-tgSecSep pb-4">
+    <div className="pb-4">
       <SearchInput />
       <Tags tags={["dating", "hate", "NSFW", "animal", "blood", "LGBT+", "safeplace"]} className="mt-4" />
     </div>

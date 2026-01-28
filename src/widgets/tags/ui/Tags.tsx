@@ -4,16 +4,18 @@ import { getTagColor } from "../lib/getTagColor";
 interface Props {
   tags: string[];
   className?: string;
+  isChannelCard?: boolean;
 }
 
-export function Tags({ tags, className }: Props) {
+export function Tags({ tags, className, isChannelCard }: Props) {
   return (
-    <div className={`flex gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide py-1 ${className}`}>
+    <div className={`flex gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide py-1 ${isChannelCard ? "max-w-[340px]" : ""} ${className}`}>
       {tags.map((tag, index) => (
         <Tag
           key={tag}
           name={tag}
           className={getTagColor(index)}
+          small={isChannelCard}
         />
       ))}
     </div>
