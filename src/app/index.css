@@ -1,0 +1,8 @@
+:root {
+  --tg-theme-bg-color: white;
+  --tg-theme-text-color: black;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
