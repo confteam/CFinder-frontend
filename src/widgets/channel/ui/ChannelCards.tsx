@@ -1,5 +1,5 @@
 import { type Channel } from "@/entities/channel";
-import { ChannelCardWithTags } from "./ChannelCardWithTags";
+import { ChannelCardWithTags } from "./ChannelCard";
 
 interface Props {
   channels: Channel[];

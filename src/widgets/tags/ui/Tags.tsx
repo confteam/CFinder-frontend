@@ -9,7 +9,7 @@ interface Props {
 
 export function Tags({ tags, className, isChannelCard }: Props) {
   return (
-    <div className={`flex gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide py-1 ${isChannelCard ? "max-w-[340px]" : ""} ${className}`}>
+    <div className={`flex gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide py-1 ${className}`}>
       {tags.map((tag, index) => (
         <Tag
           key={tag}
