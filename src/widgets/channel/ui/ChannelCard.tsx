@@ -9,18 +9,18 @@ interface Props {
 export function ChannelCardWithTags({ className, channel }: Props) {
   return (
     <div className={`relative w-full h-[190px] ${className}`}>
-      <div className="h-[55%] rounded-t-2xl" style={{ backgroundColor: channel.background }}></div>
-      <div className="h-[45%] bg-tgScBg rounded-b-2xl">
+      <div className="h-[53%] rounded-t-2xl" style={{ backgroundColor: channel.background }}></div>
+      <div className="h-[47%] bg-tgScBg rounded-b-2xl">
         <div className="pt-[5px]">
           <div className="ml-[100px]">
             <h4>{channel.name}</h4>
           </div>
-          <Tags className="px-2 mt-1" tags={channel.tags} isChannelCard />
+          <Tags className="px-3 pt-2.5" tags={channel.tags} isChannelCard />
         </div>
       </div>
       <img src={channel.image}
         alt={channel.name}
-        className="absolute left-[50px] top-[55px] -translate-x-1/2 w-20 h-20 rounded-full border-4 border-white"
+        className="absolute left-[50px] top-[50px] -translate-x-1/2 w-20 h-20 rounded-full border-4 border-white"
       />
     </div>
   );
