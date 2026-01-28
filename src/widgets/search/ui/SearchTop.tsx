@@ -1,11 +1,11 @@
 import { SearchInput } from "@/features/search";
-import { PageTitle } from "@/widgets/pageTitle";
+import { Tags } from "@/widgets/tags";
 
 export function SearchTop() {
   return (
-    <div>
-      <PageTitle title="Поиск" />
+    <div className="border-b-2 border-tgSecSep pb-4">
       <SearchInput />
+      <Tags tags={["dating", "hate", "NSFW", "animal", "blood", "LGBT+", "safeplace"]} className="mt-4" />
     </div>
   );
 }

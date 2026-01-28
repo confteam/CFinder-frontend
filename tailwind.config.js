@@ -19,9 +19,12 @@ export default {
       colors: {
         tgBg: "var(--tg-theme-bg-color)",
         tgTxt: "var(--tg-theme-text-color)",
-        tgScBg: "var(--tg-theme-secondary-bg-color)"
+        tgScBg: "var(--tg-theme-secondary-bg-color)",
+        tgSecSep: "var(--tg-theme-section-separator-color"
       }
     }
   },
-  plugins: [],
+  plugins: [
+    require("tailwind-scrollbar-hide")
+  ],
 }
