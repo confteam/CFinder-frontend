@@ -1,4 +1,4 @@
-import { useSearchStore } from "../../model/store";
+import { useSearchStore } from "../model/store";
 import { Input } from "@/shared";
 
 export function SearchInput() {

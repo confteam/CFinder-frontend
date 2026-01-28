@@ -1,4 +1,4 @@
-import { SearchInput } from "@/features/search/ui/SearchInput";
+import { SearchInput } from "@/features/search";
 import { PageTitle } from "@/widgets/pageTitle";
 
 export function SearchTop() {

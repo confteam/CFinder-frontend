@@ -1,6 +1,7 @@
 :root {
   --tg-theme-bg-color: white;
   --tg-theme-text-color: black;
+  --tg-theme-secondary-bg-color: pink;
 }
 
 @tailwind base;

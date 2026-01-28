@@ -6,7 +6,7 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "10px",
+      padding: "20px",
       screens: {
         sm: "480px",
         md: "480px",
@@ -18,7 +18,8 @@ export default {
     extend: {
       colors: {
         tgBg: "var(--tg-theme-bg-color)",
-        tgTxt: "var(--the-theme-text-color)"
+        tgTxt: "var(--tg-theme-text-color)",
+        tgScBg: "var(--tg-theme-secondary-bg-color)"
       }
     }
   },
