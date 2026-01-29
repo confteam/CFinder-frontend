@@ -33,13 +33,13 @@ export function ChannelCardWithTags({ className, channel }: Props) {
         "bg-tgScBg rounded-b-2xl flex flex-col justify-start pt-1",
         channel.isExtended ? "h-[200px]" : "h-[70px]"
       )}>
-        <div className="flex justify-between items-center w-full mt-[20px]">
+        <div className="flex justify-between items-end w-full mt-[16px]">
           <Tags className="px-3" tags={channel.tags} isChannelCard />
-          <JoinChannelButton className="mr-2 mb-2" />
+          <JoinChannelButton className="mr-2 mb-1" />
         </div>
         <p
           className={clsx(
-            "text-tgSub text-md px-3 py-1.5",
+            "text-tgSub text-md px-3 pb-2",
             channel.isExtended ? "visible" : "invisible"
           )}
         >
