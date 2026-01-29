@@ -5,6 +5,8 @@
   --tg-theme-section-separator-color: grey;
   --tg-theme-button-color: green;
   --tg-theme-button-text-color: white;
+  --tg-theme-accent-text-color: pink;
+  --tg-theme-destructive-text-color: red;
 }
 
 @tailwind base;

@@ -1,17 +1,53 @@
-import type { HtmlHTMLAttributes } from "react";
+import type { FC, HtmlHTMLAttributes, ReactNode } from "react";
+import clsx from "clsx";
+
+type ButtonSize = "sm" | "md" | "lg";
+type ButtonVariant = "primary" | "danger" | "text";
 
 interface Props extends HtmlHTMLAttributes<HTMLButtonElement> {
+  size: ButtonSize;
+  variant: ButtonVariant;
+  children: ReactNode;
+  leftIcon?: ReactNode;
+  rightIcon?: ReactNode;
+  fullWidth?: boolean;
   className?: string;
-  text: string;
 }
 
-export function Button({ className, text, onClick }: Props) {
+const sizeClasses: Record<ButtonSize, string> = {
+  sm: "py-1 px-2 text-sm",
+  md: "py-2 px-3 text-md",
+  lg: "py-3 px-4 text-lg"
+}
+
+const variantClasses: Record<ButtonVariant, string> = {
+  primary: "bg-tgBtn text-tgBtnTxt",
+  danger: "bg-tgDstr text-tgBtnTxt",
+  text: "bg-transparent text-tgAcc",
+}
+
+export const Button: FC<Props> = ({
+  size = "md",
+  variant = "primary",
+  leftIcon, rightIcon,
+  fullWidth = false,
+  className, children,
+  ...props
+}) => {
   return (
     <button
-      className={`py-2 px-3 bg-tgBtn text-tgBtnTxt rounded-xl text-sm cursor-pointer ${className}`}
-      onClick={onClick}
+      className={clsx(
+        `inline-flex items-center justify-center rounded-xl font-medium transition-colors`,
+        sizeClasses[size],
+        variantClasses[variant],
+        fullWidth && "w-full",
+        className
+      )}
+      {...props}
     >
-      {text}
+      {leftIcon && <span className="mr-2">{leftIcon}</span>}
+      {children}
+      {rightIcon && <span className="ml-2">{rightIcon}</span>}
     </button>
   );
 }

@@ -1,5 +1,5 @@
 import type { Channel } from "@/entities/channel";
-import { JoinChannelButton } from "@/features/channel";
+import { ExtendChannelCardButton, JoinChannelButton } from "@/features/channel";
 import { Tags } from "@/widgets/tags";
 
 interface Props {
@@ -10,16 +10,20 @@ interface Props {
 export function ChannelCardWithTags({ className, channel }: Props) {
   return (
     <div className={`relative h-[190px] ${className}`}>
-      <div className="h-[60%] rounded-t-2xl" style={{ backgroundColor: channel.background }}></div>
+      <div className="h-[60%] rounded-t-2xl flex justify-end items-start" style={{ backgroundColor: channel.background }}>
+        <ExtendChannelCardButton
+          className="mr-2"
+          channelName={channel.name}
+          isExtended={channel.isExtended}
+        />
+      </div>
       <div className="h-[40%] bg-tgScBg rounded-b-2xl flex justify-between items-center">
-        {/* Левая часть: название и теги */}
         <div>
           <h4 className="ml-[100px]">{channel.name}</h4>
           <Tags className="px-3 mt-1" tags={channel.tags} isChannelCard />
         </div>
 
-        {/* Правая часть: кнопка */}
-        <div className="mr-2 mt-5">
+        <div className="mr-2 mt-4">
           <JoinChannelButton />
         </div>
       </div>

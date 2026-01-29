@@ -1,11 +1,8 @@
-import { type Channel } from "@/entities/channel";
-import { ChannelCardWithTags } from "./ChannelCard";
+import { useChannelStore } from "@/entities/channel";
+import { ChannelCardWithTags } from "./ChannelCardWithTags";
 
-interface Props {
-  channels: Channel[];
-}
-
-export function ChannelCards({ channels }: Props) {
+export function ChannelCards() {
+  const { channels } = useChannelStore();
   return (
     <div>
       {channels.map((channel, index) => (

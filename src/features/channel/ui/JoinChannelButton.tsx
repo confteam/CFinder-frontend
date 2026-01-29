@@ -6,6 +6,10 @@ interface Props {
 
 export function JoinChannelButton({ className }: Props) {
   return (
-    <Button text="Открыть" className={className} />
+    <Button
+      size="md"
+      variant="primary"
+      className={className}
+    >Открыть</Button>
   );
 }

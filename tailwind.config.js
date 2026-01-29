@@ -22,7 +22,9 @@ export default {
         tgScBg: "var(--tg-theme-secondary-bg-color)",
         tgSecSep: "var(--tg-theme-section-separator-color",
         tgBtn: "var(--tg-theme-button-color)",
-        tgBtnTxt: "var(--tg-theme-button-text-color)"
+        tgBtnTxt: "var(--tg-theme-button-text-color)",
+        tgDstr: "var(--tg-theme-destructive-text-color)",
+        tgAcc: "var(--tg-theme-accent-text-color)"
       }
     }
   },
