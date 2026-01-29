@@ -15,26 +15,27 @@ export function ChannelCardWithTags({ className, channel }: Props) {
       className,
     )}>
       <div
-        className="rounded-t-2xl flex justify-end items-start h-[104px]"
+        className="rounded-t-2xl flex flex-col justify-between items-start h-[104px] relative"
         style={{ backgroundColor: channel.background }}
       >
-        <ExtendChannelCardButton
-          className="mr-2"
-          channelName={channel.name}
-          isExtended={channel.isExtended}
-        />
+        <div className="flex items-center justify-end w-full">
+          <ExtendChannelCardButton
+            className="mr-2"
+            channelName={channel.name}
+            isExtended={channel.isExtended}
+          />
+        </div>
+        <div className="flex ml-[100px]">
+          <h4 className="text-[20px] text-tgAcc">{channel.name}</h4>
+        </div>
       </div>
       <div className={clsx(
         "bg-tgScBg rounded-b-2xl flex flex-col justify-start pt-1",
-        channel.isExtended ? "h-[196px]" : "h-[66px]"
+        channel.isExtended ? "h-[200px]" : "h-[70px]"
       )}>
-        <div className="flex justify-between items-start w-full mt-0.5">
-          <div>
-            <h4 className="ml-[100px]">{channel.name}</h4>
-            <Tags className="px-3" tags={channel.tags} isChannelCard />
-          </div>
-
-          <JoinChannelButton className="mr-2 mt-3" />
+        <div className="flex justify-between items-center w-full mt-[20px]">
+          <Tags className="px-3" tags={channel.tags} isChannelCard />
+          <JoinChannelButton className="mr-2 mb-2" />
         </div>
         <p
           className={clsx(
