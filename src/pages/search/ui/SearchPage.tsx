@@ -11,25 +11,25 @@ export function SearchPage() {
           {
             background: "purple",
             name: "bebra confession",
-            tags: ["blood", "hate", "dating", "NSFW", "animal", "LGBT+", "safeplace", "game", "film", "diet"],
+            tags: ["blood", "hate", "dating"],
             image: guseniza
           },
           {
             background: "purple",
             name: "ask confession",
-            tags: ["blood", "hate", "dating", "NSFW", "animal", "LGBT+", "safeplace", "game"],
+            tags: ["blood", "hate", "dating"],
             image: guseniza
           },
           {
             background: "purple",
             name: "lgbt confession",
-            tags: ["blood", "hate", "dating", "NSFW", "animal", "LGBT+"],
+            tags: ["blood", "hate", "dating"],
             image: guseniza
           },
           {
             background: "purple",
             name: "cp confession",
-            tags: ["blood", "hate", "dating", "NSFW"],
+            tags: ["blood", "hate"],
             image: guseniza
           },
           {

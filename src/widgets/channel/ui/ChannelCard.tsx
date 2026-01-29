@@ -1,4 +1,5 @@
 import type { Channel } from "@/entities/channel";
+import { JoinChannelButton } from "@/features/channel";
 import { Tags } from "@/widgets/tags";
 
 interface Props {
@@ -8,19 +9,18 @@ interface Props {
 
 export function ChannelCardWithTags({ className, channel }: Props) {
   return (
-    <div className={`relative w-full h-[190px] ${className}`}>
-      <div className="h-[53%] rounded-t-2xl" style={{ backgroundColor: channel.background }}></div>
-      <div className="h-[47%] bg-tgScBg rounded-b-2xl">
+    <div className={`relative h-[190px] ${className}`}>
+      <div className="h-[60%] rounded-t-2xl" style={{ backgroundColor: channel.background }}></div>
+      <div className="h-[40%] bg-tgScBg rounded-b-2xl relative">
         <div className="pt-[5px]">
-          <div className="ml-[100px]">
-            <h4>{channel.name}</h4>
-          </div>
-          <Tags className="px-3 pt-2.5" tags={channel.tags} isChannelCard />
+          <h4 className="ml-[100px]">{channel.name}</h4>
+          <Tags className="px-3 mt-1" tags={channel.tags} isChannelCard />
         </div>
+        <JoinChannelButton className="absolute left-[250px] bottom-[8px]" />
       </div>
       <img src={channel.image}
         alt={channel.name}
-        className="absolute left-[50px] top-[50px] -translate-x-1/2 w-20 h-20 rounded-full border-4 border-white"
+        className="absolute left-[50px] top-[60px] -translate-x-1/2 w-20 h-20 rounded-full border-4 border-white"
       />
     </div>
   );

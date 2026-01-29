@@ -3,6 +3,8 @@
   --tg-theme-text-color: black;
   --tg-theme-secondary-bg-color: pink;
   --tg-theme-section-separator-color: grey;
+  --tg-theme-button-color: green;
+  --tg-theme-button-text-color: white;
 }
 
 @tailwind base;
