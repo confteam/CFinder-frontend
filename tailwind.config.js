@@ -24,7 +24,8 @@ export default {
         tgBtn: "var(--tg-theme-button-color)",
         tgBtnTxt: "var(--tg-theme-button-text-color)",
         tgDstr: "var(--tg-theme-destructive-text-color)",
-        tgAcc: "var(--tg-theme-accent-text-color)"
+        tgAcc: "var(--tg-theme-accent-text-color)",
+        tgSub: "var(--tg-theme-subtitle-text-color)"
       }
     }
   },
