@@ -11,12 +11,17 @@ export function ChannelCardWithTags({ className, channel }: Props) {
   return (
     <div className={`relative h-[190px] ${className}`}>
       <div className="h-[60%] rounded-t-2xl" style={{ backgroundColor: channel.background }}></div>
-      <div className="h-[40%] bg-tgScBg rounded-b-2xl relative">
-        <div className="pt-[5px]">
+      <div className="h-[40%] bg-tgScBg rounded-b-2xl flex justify-between items-center">
+        {/* Левая часть: название и теги */}
+        <div>
           <h4 className="ml-[100px]">{channel.name}</h4>
           <Tags className="px-3 mt-1" tags={channel.tags} isChannelCard />
         </div>
-        <JoinChannelButton className="absolute left-[250px] bottom-[8px]" />
+
+        {/* Правая часть: кнопка */}
+        <div className="mr-2 mt-5">
+          <JoinChannelButton />
+        </div>
       </div>
       <img src={channel.image}
         alt={channel.name}
