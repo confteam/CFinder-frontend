@@ -1,13 +1,11 @@
 :root {
-  --tg-theme-bg-color: white;
-  --tg-theme-text-color: black;
-  --tg-theme-secondary-bg-color: pink;
-  --tg-theme-section-separator-color: grey;
-  --tg-theme-button-color: green;
-  --tg-theme-button-text-color: white;
-  --tg-theme-accent-text-color: gold;
-  --tg-theme-destructive-text-color: red;
-  --tg-theme-subtitle-text-color: grey;
+  --tg-theme-bg-color: #111810;
+  --tg-theme-text-color: #F5F5F5;
+  --tg-theme-secondary-bg-color: #192218;
+  --tg-theme-button-color: #476F42;
+  --tg-theme-button-text-color: #FFFFFF;
+  --tg-theme-accent-text-color: #94E088;
+  --tg-theme-subtitle-text-color: #424F40;
 }
 
 @tailwind base;

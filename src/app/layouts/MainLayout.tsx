@@ -1,4 +1,4 @@
-import { PageTitle } from "@/widgets/pageTitle";
+import { PageTitle } from "@/widgets/PageTitle";
 import { Outlet } from "react-router-dom";
 
 export function MainLayout() {
