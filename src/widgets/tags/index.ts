@@ -1,1 +1,1 @@
-export { Tags } from "./ui/Tags";
+export { SearchTags } from "./ui/SearchTags";

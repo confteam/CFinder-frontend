@@ -1,11 +1,11 @@
-import { useChannelStore } from "@/entities/channel";
+import { useFilteredChannels } from "@/features/search";
 import { ChannelCardWithTags } from "./ChannelCardWithTags";
 
 export function ChannelCards() {
-  const { channels } = useChannelStore();
+  const { filtered } = useFilteredChannels();
   return (
     <div>
-      {channels.map((channel, index) => (
+      {filtered.map((channel, index) => (
         <ChannelCardWithTags
           key={index}
           channel={channel}

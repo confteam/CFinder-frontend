@@ -1,6 +1,6 @@
 import type { Channel } from "@/entities/channel";
 import { ExtendChannelCardButton, JoinChannelButton } from "@/features/channel";
-import { Tags } from "@/widgets/tags";
+import { ChannelTags } from "@/widgets/tags/ui/ChannelTags";
 import clsx from "clsx";
 
 interface Props {
@@ -15,7 +15,7 @@ export function ChannelCardWithTags({ className, channel }: Props) {
       className,
     )}>
       <div
-        className="rounded-t-2xl flex flex-col justify-between items-start h-[104px] relative"
+        className="rounded-t-2xl flex flex-col justify-between items-start h-[110px] relative"
         style={{ backgroundColor: channel.background }}
       >
         <div className="flex items-center justify-end w-full">
@@ -31,15 +31,15 @@ export function ChannelCardWithTags({ className, channel }: Props) {
       </div>
       <div className={clsx(
         "bg-tgScBg rounded-b-2xl flex flex-col justify-start pt-1",
-        channel.isExtended ? "h-[200px]" : "h-[70px]"
+        channel.isExtended ? "h-[200px]" : "h-[75px]"
       )}>
         <div className="flex justify-between items-end w-full mt-[16px]">
-          <Tags className="px-3" tags={channel.tags} isChannelCard />
+          <ChannelTags className="px-3" tags={channel.tags} />
           <JoinChannelButton className="mr-2 mb-1" />
         </div>
         <p
           className={clsx(
-            "text-tgSub text-md px-3 pb-2",
+            "text-tgSub text-md px-3 py-2",
             channel.isExtended ? "visible" : "invisible"
           )}
         >

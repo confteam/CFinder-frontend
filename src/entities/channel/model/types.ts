@@ -1,6 +1,8 @@
+import type { Tag } from "@/entities/tag/model/types";
+
 export type ChannelFromApi = {
   name: string;
-  tags: string[];
+  tags: Tag[];
   background: string;
   image: string;
 }
