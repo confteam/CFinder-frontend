@@ -15,9 +15,9 @@ interface Props extends HtmlHTMLAttributes<HTMLButtonElement> {
 }
 
 const sizeClasses: Record<ButtonSize, string> = {
-  sm: "py-1 px-2 text-sm",
-  md: "py-2 px-3 text-md",
-  lg: "py-3 px-4 text-lg"
+  sm: "py-1.5 px-2 text-sm",
+  md: "py-2.5 px-3 text-md",
+  lg: "py-3.5 px-4 text-lg"
 }
 
 const variantClasses: Record<ButtonVariant, string> = {
@@ -37,7 +37,7 @@ export const Button: FC<Props> = ({
   return (
     <button
       className={clsx(
-        `inline-flex items-center justify-center rounded-xl font-medium transition-colors`,
+        `inline-flex items-center justify-center rounded-2xl font-medium transition-colors`,
         sizeClasses[size],
         variantClasses[variant],
         fullWidth && "w-full",

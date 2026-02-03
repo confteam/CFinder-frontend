@@ -3,6 +3,8 @@ export type ChannelFromApi = {
   tags: string[];
   background: string;
   image: string;
+  subscribers: number;
+  description: string;
 }
 
 export type Channel = ChannelFromApi & {

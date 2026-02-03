@@ -1,5 +1,4 @@
-import { getTagColor } from "../lib/getTagColor";
-import { Tag as TagUI, useTagStore } from "@/entities/Tag";
+import { Tag, useTagStore } from "@/entities/Tag";
 
 interface Props {
   tagsNames: string[];
@@ -14,12 +13,10 @@ export function ChannelCardTags({ tagsNames, className }: Props) {
         const tag = findTag(tagName);
         if (!tag) return null;
 
-        const color = getTagColor(tag.colorIndex, false);
         return (
-          <TagUI
+          <Tag
             key={tag.name}
             name={tag.name}
-            className={color}
             small
           />
         )

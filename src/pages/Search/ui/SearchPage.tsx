@@ -17,36 +17,48 @@ export function SearchPage() {
         background: "purple",
         name: "bebra confession",
         tags: ["blood", "hate", "dating"],
+        subscribers: 4000,
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, commodi. Dolor sint accusamus ipsa velit soluta, neque fugiat? Facilis tempore unde",
         image: guseniza
       },
       {
         background: "purple",
         name: "ask confession",
         tags: ["blood", "hate", "dating"],
+        subscribers: 5060,
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, commodi. Dolor sint accusamus ipsa velit soluta, neque fugiat? Facilis tempore unde",
         image: guseniza
       },
       {
         background: "purple",
         name: "lgbt confession",
         tags: ["blood", "hate", "dating"],
+        subscribers: 1003,
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, commodi. Dolor sint accusamus ipsa velit soluta, neque fugiat? Facilis tempore unde",
         image: guseniza
       },
       {
         background: "purple",
         name: "cp confession",
         tags: ["blood", "hate"],
+        subscribers: 10000,
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, commodi. Dolor sint accusamus ipsa velit soluta, neque fugiat? Facilis tempore unde",
         image: guseniza
       },
       {
         background: "purple",
         name: "porn confession",
         tags: ["blood", "hate"],
+        subscribers: 3070,
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, commodi. Dolor sint accusamus ipsa velit soluta, neque fugiat? Facilis tempore unde",
         image: guseniza
       },
       {
         background: "purple",
         name: "relationship confession",
         tags: ["dating"],
+        subscribers: 12300,
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, commodi. Dolor sint accusamus ipsa velit soluta, neque fugiat? Facilis tempore unde",
         image: guseniza
       },
     ]);

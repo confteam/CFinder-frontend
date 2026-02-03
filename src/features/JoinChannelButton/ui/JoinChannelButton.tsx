@@ -9,7 +9,7 @@ export function JoinChannelButton({ className }: Props) {
     <Button
       size="md"
       variant="primary"
-      className={className}
+      className={`${className} w-full bg-gradient-to-r from-blue-500 to-purple-500`}
     >Открыть</Button>
   );
 }
