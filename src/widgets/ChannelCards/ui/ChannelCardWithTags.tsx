@@ -21,7 +21,7 @@ export function ChannelCardWithTags({ className, channel }: Props) {
     >
       <div className="h-[130px] rounded-t-[28px] bg-gradient-to-r from-blue-500 to-purple-500">
         <div className="flex items-center pt-5 pl-5 gap-4">
-          <img src={channel.image} alt={channel.name} className="rounded-2xl border border-white/60 shadow-lg h-16 w-16" />
+          <img src={channel.pfp} alt={channel.name} className="rounded-2xl border border-white/60 shadow-lg h-16 w-16" />
           <div className="flex flex-col">
             <h2 className="text-2xl">{channel.name}</h2>
             <p className="text-sm">Нажмите на карточку, чтобы раскрыть</p>
@@ -36,13 +36,13 @@ export function ChannelCardWithTags({ className, channel }: Props) {
       >
         <ChannelCardTags tagsNames={channel.tags} />
         <h3 className="text-md mt-2">
-          <span className="font-bold">{channel.subscribers + " "}</span>
+          <span className="font-bold">{channel.subs + " "}</span>
           <span>подписчиков</span>
         </h3>
         {
           channel.isExtended &&
           <p className="text-md mt-2">
-            {channel.description}
+            {channel.caption}
           </p>
         }
         <JoinChannelButton className="mt-auto mb-4" />

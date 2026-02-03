@@ -1,44 +1,36 @@
 import { create } from "zustand";
-import type { Channel, ChannelFromApi } from "./types";
+import type { Channel } from "./types";
+import { channelApi } from "../api/channelApi";
 
 interface ChannelState {
   channels: Channel[];
-  addChannels: (channels: ChannelFromApi[]) => void;
-  setChannels: (channels: ChannelFromApi[]) => void;
-  updateChannel: (name: string, data: Partial<Channel>) => void;
+
+  loading: boolean;
+  error?: string;
+  fetchChannels: () => void;
+
+  setChannels: (channels: Channel[]) => void;
   toggleExtendedChannel: (name: string) => void;
 }
 
 export const useChannelStore = create<ChannelState>((set) => ({
   channels: [],
 
-  addChannels: (newChannels) =>
-    set((state) => ({
-      channels: [
-        ...state.channels,
-        ...newChannels.map((channel) => ({
-          ...channel,
-          isExtended: false,
-        })),
-      ],
-    })),
+  loading: false,
+  fetchChannels: async () => {
+    set({ loading: true, error: undefined });
 
-  setChannels: (channels) =>
-    set({
-      channels: channels.map((channel) => ({
-        ...channel,
-        isExtended: false,
-      })),
-    }),
+    try {
+      const channels = await channelApi.getAll();
+      set({ channels });
+    } catch (err: any) {
+      set({ error: err.message || "Failed to fetch channels" });
+    } finally {
+      set({ loading: false });
+    }
+  },
 
-  updateChannel: (name: string, data: Partial<Channel>) =>
-    set((state) => ({
-      channels: state.channels.map((channel) =>
-        channel.name === name
-          ? { ...channel, ...data }
-          : channel
-      ),
-    })),
+  setChannels: (channels) => set({ channels }),
   toggleExtendedChannel: (name) =>
     set((state) => ({
       channels: state.channels.map((channel) =>
