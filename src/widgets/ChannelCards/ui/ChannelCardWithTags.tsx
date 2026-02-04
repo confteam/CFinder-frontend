@@ -11,6 +11,8 @@ interface Props {
 export function ChannelCardWithTags({ className, channel }: Props) {
   const { toggleExtendedChannel } = useChannelStore();
 
+  const gradient = `linear-gradient(to right, ${channel.colors[0]}, ${channel.colors[1]}`;
+
   return (
     <div
       className={clsx(
@@ -19,7 +21,10 @@ export function ChannelCardWithTags({ className, channel }: Props) {
       )}
       onClick={() => toggleExtendedChannel(channel.name)}
     >
-      <div className="h-[130px] rounded-t-[28px] bg-gradient-to-r from-blue-500 to-purple-500">
+      <div
+        className="h-[130px] rounded-t-[28px]"
+        style={{ background: gradient }}
+      >
         <div className="flex items-center pt-5 pl-5 gap-4">
           <img src={channel.pfp} alt={channel.name} className="rounded-2xl border border-white/60 shadow-lg h-16 w-16" />
           <div className="flex flex-col">
@@ -45,7 +50,7 @@ export function ChannelCardWithTags({ className, channel }: Props) {
             {channel.caption}
           </p>
         }
-        <JoinChannelButton className="mt-auto mb-4" />
+        <JoinChannelButton className="mt-auto mb-4" gradient={gradient} />
       </div>
     </div>
   );

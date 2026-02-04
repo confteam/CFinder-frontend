@@ -1,10 +1,9 @@
 import type { TagDto } from "@/entities/Tag/model/types";
 
 export interface ChannelDto {
-  background: string;
   caption: string;
   chan_id: number;
-  color: string[];
+  colors: string[];
   join_link: string;
   name: string;
   pfp: string;
@@ -14,9 +13,8 @@ export interface ChannelDto {
 
 export type Channel = {
   id: number;
-  background: string;
   pfp: string;
-  color: string[];
+  colors: string[];
   caption: string;
   link: string;
   name: string;

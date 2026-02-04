@@ -3,9 +3,8 @@ import type { Channel, ChannelDto } from "../model/types";
 export function mapChannelDtoToChannel(dto: ChannelDto): Channel {
   return {
     id: dto.chan_id,
-    background: dto.background,
     pfp: dto.pfp,
-    color: dto.color,
+    colors: dto.colors,
     caption: dto.caption,
     link: dto.join_link,
     name: dto.name,
