@@ -2,6 +2,7 @@ import { useChannelStore, type Channel } from "@/entities/Channel";
 import { JoinChannelButton } from "@/features/JoinChannelButton";
 import { ChannelCardTags } from "@/widgets/ChannelTags";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 
 interface Props {
   channel: Channel;
@@ -16,7 +17,7 @@ export function ChannelCardWithTags({ className, channel }: Props) {
   return (
     <div
       className={clsx(
-        `w-full transition-transform duration-500 ease-out relative cursor-pointer`,
+        `w-full relative cursor-pointer`,
         className
       )}
       onClick={() => toggleExtendedChannel(channel.name)}
@@ -33,11 +34,14 @@ export function ChannelCardWithTags({ className, channel }: Props) {
           </div>
         </div>
       </div>
-      <div className={clsx(
-        "w-full rounded-[28px] bg-tgScBg relative bottom-[30px] px-4 pt-4",
-        "flex flex-col",
-        channel.isExtended ? "h-[240px]" : "h-[150px]"
-      )}
+      <motion.div
+        className={clsx(
+          "w-full rounded-[28px] bg-tgScBg relative bottom-[30px] px-4 pt-4 overflow-hidden",
+          "flex flex-col",
+        )}
+        initial={{ height: 150 }}
+        animate={{ height: channel.isExtended ? 240 : 150 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
       >
         <ChannelCardTags tagsNames={channel.tags} />
         <h3 className="text-md mt-2">
@@ -46,12 +50,19 @@ export function ChannelCardWithTags({ className, channel }: Props) {
         </h3>
         {
           channel.isExtended &&
-          <p className="text-md mt-2">
-            {channel.caption}
-          </p>
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: channel.isExtended ? 1 : 0, height: channel.isExtended ? "auto" : 0 }}
+            transition={{ duration: 0.1, ease: "easeOut" }}
+            className="overflow-hidden"
+          >
+            <p className="text-md mt-2">
+              {channel.caption}
+            </p>
+          </motion.div>
         }
         <JoinChannelButton className="mt-auto mb-4" gradient={gradient} />
-      </div>
+      </motion.div>
     </div>
   );
 }
