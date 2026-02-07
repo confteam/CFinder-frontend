@@ -64,7 +64,7 @@ export function ChannelCardWithTags({ className, channel }: Props) {
           )}
         </AnimatePresence>
 
-        <JoinChannelButton className="mt-auto mb-4" gradient={gradient} />
+        <JoinChannelButton className="mt-auto mb-4" gradient={gradient} link={channel.link} />
       </motion.div>
     </div>
   );
