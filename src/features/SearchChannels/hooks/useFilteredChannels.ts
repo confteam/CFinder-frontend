@@ -13,7 +13,7 @@ export const useFilteredChannels = () => {
   const filtered = channels.filter((channel) => {
     const matchesQuery = channel.name
       .toLowerCase()
-      .includes(query.toLowerCase());
+      .startsWith(query.toLowerCase());
 
     const matchesTags = tags.every((tag) =>
       channel.tags.some((t) => t === tag)
