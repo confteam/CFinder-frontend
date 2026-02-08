@@ -1,4 +1,4 @@
-import { PageTitle } from "@/widgets/PageTitle";
+import { Logo } from "@/widgets/Logo";
 import { Outlet } from "react-router-dom";
 
 export function MainLayout() {
@@ -6,7 +6,7 @@ export function MainLayout() {
     <div className="min-h-screen bg-tgBg text-tgTxt">
       <div className="container pt-2">
         <div className="flex justify-center items-center">
-          <PageTitle />
+          <Logo />
         </div>
         <Outlet />
       </div>
