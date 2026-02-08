@@ -13,7 +13,7 @@ export function SearchChannelsDropdown() {
   if (matched.length === 0) return null;
 
   return (
-    <div className="absolute mt-1 bg-tgScBg border rounded shadow-md z-10">
+    <div className="absolute mt-1 bg-secondBg border rounded shadow-md z-10">
       {matched.map((t) => (
         <div
           key={t.name}

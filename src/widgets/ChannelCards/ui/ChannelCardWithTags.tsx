@@ -38,7 +38,7 @@ export function ChannelCardWithTags({ className, channel }: Props) {
       <motion.div
         layout="size"
         className={clsx(
-          "w-full rounded-[28px] bg-tgBg relative bottom-[30px] px-4 pt-4",
+          "w-full rounded-[28px] bg-bg relative bottom-[30px] px-4 pt-4",
           "flex flex-col overflow-hidden"
         )}
         transition={{ duration: 0.5, ease: "circInOut" }}

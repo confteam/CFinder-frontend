@@ -17,14 +17,12 @@ export default {
     },
     extend: {
       colors: {
-        tgBg: "var(--tg-theme-bg-color)",
-        tgTxt: "var(--tg-theme-text-color)",
-        tgScBg: "var(--tg-theme-secondary-bg-color)",
-        tgBtn: "var(--tg-theme-button-color)",
-        tgBtnTxt: "var(--tg-theme-button-text-color)",
-        tgDstr: "var(--tg-theme-destructive-text-color)",
-        tgAcc: "var(--tg-theme-accent-text-color)",
-        tgSecBg: "var(--tg-theme-section-bg-color)"
+        bg: "#1E1E1E",
+        txt: "#FDFDFD",
+        secondBg: "#000000",
+        buttonTxt: "#FEFBFE",
+        redBleed: "#F26666",
+        red: "#DA3542",
       }
     }
   },
