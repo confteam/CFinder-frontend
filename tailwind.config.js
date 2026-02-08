@@ -20,12 +20,11 @@ export default {
         tgBg: "var(--tg-theme-bg-color)",
         tgTxt: "var(--tg-theme-text-color)",
         tgScBg: "var(--tg-theme-secondary-bg-color)",
-        tgSecSep: "var(--tg-theme-section-separator-color",
         tgBtn: "var(--tg-theme-button-color)",
         tgBtnTxt: "var(--tg-theme-button-text-color)",
         tgDstr: "var(--tg-theme-destructive-text-color)",
         tgAcc: "var(--tg-theme-accent-text-color)",
-        tgSub: "var(--tg-theme-subtitle-text-color)"
+        tgSecBg: "var(--tg-theme-section-background-color)"
       }
     }
   },
