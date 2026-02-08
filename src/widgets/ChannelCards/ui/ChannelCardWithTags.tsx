@@ -1,6 +1,6 @@
 import { useChannelStore, type Channel } from "@/entities/Channel";
 import { JoinChannelButton } from "@/features/JoinChannelButton";
-import { cutText } from "@/shared";
+import { cutText, darkenColor } from "@/shared";
 import { ChannelCardTags } from "@/widgets/ChannelTags";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
@@ -14,6 +14,7 @@ export function ChannelCardWithTags({ className, channel }: Props) {
   const { toggleExtendedChannel } = useChannelStore();
 
   const gradient = `linear-gradient(to right, ${channel.colors[0]}, ${channel.colors[1]}`;
+  const darkGradient = `linear-gradient(to right, ${darkenColor(channel.colors[0])}, ${darkenColor(channel.colors[1])}`;
 
   return (
     <div
@@ -64,7 +65,7 @@ export function ChannelCardWithTags({ className, channel }: Props) {
           )}
         </AnimatePresence>
 
-        <JoinChannelButton className="mt-auto mb-4" gradient={gradient} link={channel.link} />
+        <JoinChannelButton className="mt-auto mb-4" gradient={gradient} darkGradient={darkGradient} link={channel.link} />
       </motion.div>
     </div>
   );
