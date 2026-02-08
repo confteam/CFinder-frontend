@@ -16,7 +16,7 @@ export function Tag({ name, className, small, onClick, selected }: Props) {
       underline-offset-4 decoration-slate-300 hover:decoration-slate-600
       hover:cursor-pointer transition-colors duration-150`,
         className,
-        selected ? "bg-tgTxt text-tgBg" : "bg-tgBg"
+        small ? (selected ? "bg-tgTxt text-tgBg" : "bg-tgBg") : (selected ? "bg-tgTxt text-tgScbg" : "bg-tgScBg")
       )}
       onClick={onClick}
     >{name}</span>
