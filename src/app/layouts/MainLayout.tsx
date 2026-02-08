@@ -5,7 +5,7 @@ export function MainLayout() {
   return (
     <div className="min-h-screen bg-secondBg text-txt">
       <div className="container pt-2">
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center pt-2">
           <Logo />
         </div>
         <Outlet />
