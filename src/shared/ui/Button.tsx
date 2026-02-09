@@ -2,7 +2,7 @@ import type { FC, HtmlHTMLAttributes, ReactNode } from "react";
 import clsx from "clsx";
 
 type ButtonSize = "sm" | "md" | "lg";
-type ButtonVariant = "primary" | "danger" | "text";
+type ButtonVariant = "primary";
 
 interface Props extends HtmlHTMLAttributes<HTMLButtonElement> {
   size: ButtonSize;
@@ -21,9 +21,7 @@ const sizeClasses: Record<ButtonSize, string> = {
 }
 
 const variantClasses: Record<ButtonVariant, string> = {
-  primary: "bg-tgBtn text-tgBtnTxt",
-  danger: "bg-tgDstr text-tgBtnTxt",
-  text: "bg-transparent text-tgAcc",
+  primary: "bg-redBleed active:bg-red text-buttonTxt",
 }
 
 export const Button: FC<Props> = ({

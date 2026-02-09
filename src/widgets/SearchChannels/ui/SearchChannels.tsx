@@ -1,4 +1,4 @@
-import { SearchChannelsInput } from "@/features/SearchChannels";
+import { SearchChannelsInput, SearchChannelsSort } from "@/features/SearchChannels";
 import { SearchChannelsTags } from "@/widgets/ChannelTags";
 
 export function SearchChannels() {
@@ -6,6 +6,7 @@ export function SearchChannels() {
     <div className="pb-4">
       <SearchChannelsInput />
       <SearchChannelsTags className="mt-4" />
+      <SearchChannelsSort className="mt-4" />
     </div>
   );
 }

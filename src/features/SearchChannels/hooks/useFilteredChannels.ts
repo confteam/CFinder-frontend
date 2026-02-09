@@ -3,7 +3,7 @@ import { useSearchStore } from "../model/store"
 import { useTagStore } from "@/entities/Tag";
 
 export const useFilteredChannels = () => {
-  const { query } = useSearchStore();
+  const { query, sort } = useSearchStore();
   const { getSelected } = useTagStore();
   const { channels } = useChannelStore();
 
@@ -20,6 +20,8 @@ export const useFilteredChannels = () => {
     );
 
     return matchesQuery && matchesTags;
+  }).sort((a, b) => {
+    return sort === "asc" ? a.subs - b.subs : b.subs - a.subs;
   });
 
   return { filtered };
