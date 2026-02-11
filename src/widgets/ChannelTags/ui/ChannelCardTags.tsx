@@ -9,7 +9,7 @@ export function ChannelCardTags({ tagsNames, className }: Props) {
   const { findTag } = useTagStore();
   return (
     <div className={`flex gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide py-1 ${className}`}>
-      {tagsNames.map((tagName) => {
+      {tagsNames.length > 0 ? (tagsNames.map((tagName) => {
         const tag = findTag(tagName);
         if (!tag) return null;
 
@@ -20,7 +20,8 @@ export function ChannelCardTags({ tagsNames, className }: Props) {
             small
           />
         )
-      })}
+      })) : <Tag name="без тегов" small />}
+
     </div>
   );
 }

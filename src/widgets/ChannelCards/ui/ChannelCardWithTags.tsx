@@ -1,6 +1,6 @@
 import { useChannelStore, type Channel } from "@/entities/Channel";
 import { JoinChannelButton } from "@/features/JoinChannelButton";
-import { cutText, darkenColor } from "@/shared";
+import { darkenColor } from "@/shared";
 import { ChannelCardTags } from "@/widgets/ChannelTags";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
@@ -25,13 +25,13 @@ export function ChannelCardWithTags({ className, channel }: Props) {
       onClick={() => toggleExtendedChannel(channel.name)}
     >
       <div
-        className="h-[130px] rounded-t-[28px]"
+        className="h-auto pb-10 rounded-t-[28px]"
         style={{ background: gradient }}
       >
         <div className="flex items-center pt-5 pl-5 gap-4">
           <img src={channel.pfp} alt={channel.name} className="rounded-2xl border border-white/60 shadow-lg h-16 w-16" />
           <div className="flex flex-col">
-            <h2 className="text-xl">{cutText(channel.name, 20)}</h2>
+            <h2 className="text-xl">{channel.name}</h2>
             <p className="text-sm">Нажмите на карточку, чтобы раскрыть</p>
           </div>
         </div>
@@ -59,7 +59,7 @@ export function ChannelCardWithTags({ className, channel }: Props) {
               exit={{ opacity: 0, height: 0 }}
             >
               <p className="text-md pb-3">
-                {channel.caption}
+                {channel.caption || "Владелец канала еще не добавил описание в CFinder"}
               </p>
             </motion.div>
           )}
