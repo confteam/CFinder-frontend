@@ -28,8 +28,8 @@ export function ChannelCardWithTags({ className, channel }: Props) {
         className="h-auto pb-10 rounded-t-[28px]"
         style={{ background: gradient }}
       >
-        <div className="flex items-center pt-5 pl-5 gap-4">
-          <img src={channel.pfp} alt={channel.name} className="rounded-2xl border border-white/60 shadow-lg h-16 w-16" />
+        <div className="flex items-center pt-5 pb-2 pl-5 gap-4">
+          <img src={channel.pfp} alt={channel.name} className="rounded-full border border-white/60 shadow-lg h-16 w-16" />
           <div className="flex flex-col">
             <h2 className="text-xl">{channel.name}</h2>
             <p className="text-sm">Нажмите на карточку, чтобы раскрыть</p>
