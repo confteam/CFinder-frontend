@@ -19,7 +19,7 @@ export default {
       colors: {
         bg: "#1E1E1E",
         txt: "#FDFDFD",
-        secondBg: "#000000",
+        secondBg: "#101012",
         buttonTxt: "#FEFBFE",
         redBleed: "#F26666",
         red: "#DA3542",
